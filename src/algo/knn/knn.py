@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 import sys
-sys.path.append(r"..")
-#sys.path.append(r"..\..\data")
-#from Sample import Sample
-from Classifier import Classifier
+sys.path.append(r"..\..")
+from algo.Classifier import Classifier
 
 class KNNClassifier(Classifier):
     def __init__(self, *args, **kwargs):
@@ -28,5 +26,5 @@ class KNNClassifier(Classifier):
             label_map[label] = label_map.get(label, 0) + 1
         predicted = sorted(label_map.items(), 
                            key = lambda x: x[1], 
-                            reverse = True)[0]
+                            reverse = True)[0][0]
         return predicted

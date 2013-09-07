@@ -31,6 +31,7 @@ class DigitDataSet(DataSet):
             line = line.strip()
             line_feature = [ord(ch) - ord('0') for ch in line]
             feature.extend(line_feature)
+            
         self.dim = len(feature)
         return Feature(np.array(feature))
 

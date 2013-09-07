@@ -18,13 +18,9 @@ class KNNClassifier(Classifier):
     def Classify(self, test_sample):
         distances = []
         for sample in self.train_dataset.GetSamples():
-            dis = sample.Distance(test_sample)
-            label = sample.label
-            distances.append((dis, label))
+            distances.append((sample.Distance(test_sample), sample.label))
         label_map = {}
         for dis, label in sorted(distances)[0:self.K]:
             label_map[label] = label_map.get(label, 0) + 1
-        predicted = sorted(label_map.items(), 
-                           key = lambda x: x[1], 
-                            reverse = True)[0][0]
+        predicted = sorted(label_map.items(),key = lambda x: -x[1])[0][0]
         return predicted

@@ -1,3 +1,14 @@
-test
+2013.9.7
+    + implement KNN algorithm in a very direct and simple manner
+    + add digit number dataset, the training set has 1934 samples, test set has 946 samples
+    + when K = 7, the accuracies on training and test set are 98.0352% and 97.8858%
+    + in $(PythonicMLROOT)/src/test, there is a program TestKNN.py which drives the KNN test
+        python TestKNN.py
+    
+any questions, please feel free to contact with me!
+
+email: speedmancs@gmail.com
+linkedin: http://www.linkedin.com/pub/gao-feng/53/7b6/a34
+interest of mine: machine learning, NLP
 
 
